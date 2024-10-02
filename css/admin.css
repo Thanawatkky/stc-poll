@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    display: flex;
+    background: #f4f4f4;
+    height: 100%;
+}
+.alert-success{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(144, 238, 144, 0.751);
+    padding: 1rem;
+    color: green;
+    margin-top: 1rem;
+}
+.alert-error{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(240, 128, 128, 0.643);
+    padding: 1rem;
+    color: darkred;
+    margin-top: 1rem;
+}
+.sidebar{
+    background-color: darkblue;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    width: 250px;
+    & h2{
+        text-align: center;
+        padding: 2rem;
+        margin-top: 1rem;
+    }
+    & .side-menu{
+        margin: 2rem;
+        & .side-item{
+            padding: .5rem;
+            margin: 2rem 0;
+            & .side-link{
+                color: white;
+                font-size: large;
+                transition: .4s;
+            }
+            & .side-link:hover{
+                color: lightgray;
+                font-size: larger;
+            }
+        }
+    }
+}
+.main-content{
+    margin-left: 250px;
+    width: 100%;
+}
+.content{
+    margin: 20px;
+}
+.navbar{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background: #ffff;
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    & .navbar-nav{
+        padding: 1rem;
+        margin-right: 20px;
+        & .nav-item{
+            padding: 1rem;
+            & .nav-link{
+                color: black;
+                font-size: large;
+                transition: .4s;
+            }
+            & .nav-link:hover{
+                color: red;
+                font-size: larger;
+            }
+        }
+    }
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem auto;
+    box-shadow: 1px 1px 1px lightgray;
+    & thead{
+        background: blue;
+        
+        & tr{
+            & th{
+                color: white;
+                padding: 1rem;
+            }
+        }
+    }
+    & tbody{
+        text-align: center;
+        background: white;
+        /* margin: 1rem; */
+        & tr {
+            & td{
+                padding: 1.5rem;
+            }
+        }
+    }
+}
+.btn-edit{
+    padding: .5rem 1rem;
+    margin: 10px;
+    border: 1px solid darkorange;
+    color: darkorange;
+    font-size: medium;
+    border-radius: 10px;
+    transition: .2s;
+
+}
+.btn-edit:hover{
+   color: white;
+   background-color: darkorange;
+}
+.btn-del{
+    padding: .5rem 1rem;
+    border: 1px solid darkred;
+    color: darkred;
+    font-size: medium;
+    border-radius: 10px;
+    transition: .2s;
+
+}
+.btn-del:hover{
+   color: white;
+   background-color: darkred;
+}
+
+.btn-add{
+    padding: .5rem 2rem;
+    margin: 20px 0;
+    border: 1px solid blue;
+    border-radius: 10px;
+    color: blue;
+    font-size: medium;
+    transition: .2s;
+}
+.btn-add:hover{
+    color: white;
+    background-color: blue;
+ }
+@media screen and (max-width: 1220px) {
+    .btn-del{
+        display: block;
+        margin: 1rem;
+    }
+}
+
+form{
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px lightgray;
+    & .form-group{
+        display: block;
+        margin: 2rem 0;
+        & label{
+            display: block;
+            margin: 10px 0;
+        }
+        & .form-control{
+            width: 100%;
+            border: 1px solid lightgray;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+        & textarea{
+            border: 1px solid lightgray;
+            padding: 1rem;
+            width: 100%;
+            resize: none;
+            border-radius: 10px;
+        }
+    }
+    & .btn-submit{
+        text-align: center;
+        padding: .5rem 2rem;
+        border: 1px solid darkgreen;
+        width: 80%;
+        margin-bottom: 1rem;
+        background-color:  darkgreen;
+        color: white;
+        border-radius: 20px;
+        font-size: large;
+        transition: .4s;
+    }
+    & .btn-submit:hover{
+        opacity: 60%;
+        cursor: pointer;
+    }
+}
+
+.content-profile{
+    & .logo{
+        display: block;
+        margin: 8rem auto;
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        & .txt-logo{
+            padding: 2rem 0;
+            background: linear-gradient(#1D976C, #93F9B9);
+            color: white;
+            border-radius: 20px;
+            border-top-right-radius: 60px;
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .logo{
+            margin: 1rem auto;
+        }
+    }
+    & form{
+        display: block;
+        margin: 0 auto;
+        width: 500px;
+        height: 100%;
+        & .form-group{
+            margin: 1rem;
+            & label{
+                display: block;
+                margin: 10px;
+
+            }
+            & input{
+                width: 100%;
+                padding: .75rem;
+                border: 1px solid lightgray;
+                border-radius: 20px;
+            }
+        }
+        & .text-center{
+            margin: 1rem auto;
+            text-align: center;
+            & button{
+                padding: .75rem;
+                width: 80%;
+                text-align: center;
+                background-color: rgba(36, 34, 34, 0.791);
+                border: none;
+                border-radius: 20px;
+                box-shadow: 1px 1px 1px 1px lightgray;
+                color: white;
+                font-size: large;
+            }
+            & button:hover{
+                opacity: 70%;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.col-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.card{
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: white;
+    padding: 1rem;
+    & .card-header{
+        padding: .5rem;
+    }
+    & .card-body{
+        padding: .5rem;
+        
+    }
+}
+.poll-chart{
+    margin-bottom: 1rem;
+    & .card{
+        border: 1px solid lightgray;
+
+        & h4{
+            padding: .25rem;
+        }
+        & .border-chart{
+            height: 1.5rem;
+            border: 1px solid lightgray;
+            margin: 1rem;
+            border-radius: 10px;
+            & .inline-chart{
+                background-color: blue;
+                width: 0;
+                height: 100%;
+                border-radius: 10px;
+                
+            }
+        }
+    }
+    
+}
+.col-5{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    
+}
+.border-vertical{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 350px;
+    margin-top: 3rem;
+}
+.border-vertical-inline{
+    background-color: blue;
+    border: 1px solid blue;
+    height: 0;
+    margin-top: 1rem;
+    width: 25%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

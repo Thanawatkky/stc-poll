@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    display: block;
+    width: 1140px;
+    height: 100%;
+    margin: 0 auto;
+}
+.alert-success{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(144, 238, 144, 0.751);
+    padding: 1rem;
+    color: green;
+    margin-top: 1rem;
+}
+.alert-error{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(240, 128, 128, 0.643);
+    padding: 1rem;
+    color: darkred;
+    margin-top: 1rem;
+}
+.navbar{
+    background-color: blue;
+    & .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & .navbar-brand{
+            text-decoration: none;
+            color: white;
+            font-size: xx-large;
+            font-weight: 600;
+        }
+        & .navbar-nav{
+            display: flex;
+            padding: 2rem;
+            list-style: none;
+            & .nav-item{
+                margin: 0 1rem;
+                & .nav-link{
+                    color: white;
+                    text-decoration: none;
+                    font-size: large;
+                }
+                & .nav-link:hover{
+                    color: lightgray;
+                }
+            }
+        }
+    }
+}
+.content-profile{
+    & .logo{
+        display: block;
+        margin: 8rem auto;
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        & .txt-logo{
+            padding: 2rem 0;
+            background: linear-gradient(#1D976C, #93F9B9);
+            color: white;
+            border-radius: 20px;
+            border-top-right-radius: 60px;
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .logo{
+            margin: 1rem auto;
+        }
+    }
+    & form{
+        display: block;
+        margin: 0 auto;
+        width: 500px;
+        height: 100%;
+        & .form-group{
+            margin: 1rem;
+            & label{
+                display: block;
+                margin: 10px;
+
+            }
+            & input{
+                width: 100%;
+                padding: .75rem;
+                border: 1px solid lightgray;
+                border-radius: 20px;
+            }
+        }
+        & .text-center{
+            margin: 1rem auto;
+            text-align: center;
+            & button{
+                padding: .75rem;
+                width: 80%;
+                text-align: center;
+                background-color: rgba(36, 34, 34, 0.791);
+                border: none;
+                border-radius: 20px;
+                box-shadow: 1px 1px 1px 1px lightgray;
+                color: white;
+                font-size: large;
+            }
+            & button:hover{
+                opacity: 70%;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.content-dashboard{
+    margin: .5rem;
+    & .txt-header{
+        padding: 1rem;
+        color: gray;
+        border-bottom: 1px solid lightgray;
+    }
+    & .col-4{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+        & .card{
+            width: 100%;
+            
+            border: 1px solid lightgray;
+            margin: 1rem;
+            padding: 2rem;
+            border-radius: 10px;
+            & .card-header{
+                width: 100%;
+                padding: .25rem;
+                & h3{
+                    display: block;
+                    text-align: center;
+                    width: 100%;
+                    margin-bottom: 1.5rem;
+                    font-size: larger;
+                }
+            }
+            & .card-body{
+                width: 100%;
+                padding: .25rem;
+                height: 100px;
+              
+                & p{
+                    color: gray;
+                }
+               
+            }
+            & .card-footer{
+                & .btn-select{
+                    padding: .5rem 2rem;
+                    border: 1px solid blue;
+                    border-radius: 20px;
+                    text-align: center;
+                    display: block;
+                    margin-top: 2rem;
+                    text-decoration: none;
+                    color: blue;
+                    transition: .4s;
+                }
+                & .btn-select:hover{
+                    background-color: blue;
+                    color: white;
+                }
+            }
+        }
+    }
+
+}
+.content-poll{
+    margin-top: 2rem;
+    & .card{
+        width: 100%;
+        border: 1px solid lightgray;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px lightgray;
+        & .card-header{
+            margin-bottom: .5rem;
+        }
+        & .card-body{
+            color: gray;
+            margin-bottom: 1rem;
+        }
+        & .card-footer{
+            padding: 10px;
+            & form{
+               & .form-group{
+                & input{
+                    margin: .5rem;
+                }
+            }
+            & button{
+                margin-top: 1rem;
+                padding: .5rem 1rem;
+                font-size: medium;
+                border: 1px solid blue;
+                border-radius: 10px;
+                color: blue;
+                background-color: #fff;
+                transition: .4s;
+            }
+            & button:hover{
+                background-color: blue;
+                color: white;
+                cursor: pointer;
+                
+            }
+               & .form-group-textarea{
+                    & label{
+                        display: block;
+                        margin-bottom: .5rem;
+                    }
+                    & textarea{
+                        border: 1px solid lightgray;
+                        padding: 1rem;
+                        border-radius: 10px;
+                        resize: none;
+                    }
+               }
+            }
+        }
+    }
+}
+.content-history{
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        margin: 2rem auto;
+        box-shadow: 1px 1px 1px lightgray;
+        & thead{
+            background: blue;
+            
+            & tr{
+                & th{
+                    color: white;
+                    padding: 1rem;
+                }
+            }
+        }
+        & tbody{
+            text-align: center;
+            background: white;
+            /* margin: 1rem; */
+            & tr {
+                & td{
+                    padding: 1.5rem;
+                }
+            }
+        }
+    }
+}

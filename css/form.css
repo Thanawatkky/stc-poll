@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    width: 1140px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.logo{
+    display: block;
+    margin: 8rem auto;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    & .txt-logo{
+        padding: 2rem 0;
+        background: linear-gradient(#1D976C, #93F9B9);
+        color: white;
+        border-radius: 20px;
+        border-top-right-radius: 60px;
+    }
+}
+.card{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightgray;
+    padding: 2rem;
+    margin: 4rem auto;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    border-radius: 20px;
+}
+@media screen and  (max-width: 1280px) {
+    .card{
+        margin: 1rem auto;
+    }
+    .logo{
+        display: block;
+        margin: 1rem auto;
+        text-align: center;
+    }
+}
+.col-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+ .form-group{
+    display: block;
+    margin: 1rem;
+    text-align: center;
+
+
+}
+ label{
+    display: block;
+    padding: .5rem 10px;
+    margin: 0 auto;
+    width: 300px;
+    text-align: start;
+}
+ input{
+    padding: .75rem;
+    width: 300px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+form{
+    width: 650px;
+    display: block;
+    margin: 2rem auto;
+}
+  
+button.btn-submit{
+    display: block;
+    text-align: center;
+    padding: .75rem;
+    width: 500px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right,#2B32B2,#1488CC);
+    color: white;
+    font-size: medium;
+}
+ button.btn-submit:hover{
+    opacity: 70%;
+    cursor: pointer;
+}
+button.btn-submit-login{
+    display: block;
+    text-align: center;
+    padding: .75rem;
+    width: 300px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right,#2B32B2,#1488CC);
+    color: white;
+    font-size: medium;
+}
+ button.btn-submit-login:hover{
+    opacity: 70%;
+    cursor: pointer;
+}
+.alert-success{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(144, 238, 144, 0.751);
+    padding: 1rem;
+    color: green;
+}
+.alert-error{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(240, 128, 128, 0.643);
+    padding: 1rem;
+    color: darkred;
+}
