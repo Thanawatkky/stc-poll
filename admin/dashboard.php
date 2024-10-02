@@ -7,7 +7,13 @@
                     $sql_userInSection = $conn->query("SELECT COUNT(res_user) AS user_section FROM tb_result ");
                     $fet_userInSection  = $sql_userInSection->fetch_object();
             
+                    $sql_check = $conn->query("SELECT * FROM tb_result ");
+                    if($sql_check->num_rows <= 0) {
+                        $sum_user = 0;
+                    }else{
+                        
                     $sum_user = ($fet_userInSection->user_section / $fet_alluser->user_count)*100;
+                    }
         ?>
         <h2 style="margin-left: 1rem;">จำนวนคนที่เข้าร่วมทั้งหมด</h2>
         <p style="text-align: end; margin-right: 1rem;" id="persent"><?=  $sum_user; ?>%</p>
@@ -79,6 +85,13 @@
             <?php } ?>
         </tbody>
     </table>
+    <?php 
+        if($sql->num_rows <= 0) {
+    ?>
+    <div class="text-center" style="text-align: center;">
+        <h2 style="color: gray; margin: 1rem;">Not Found!</h2>
+    </div>
+    <?php } ?>
     <script>
         let persent = document.getElementById('persent').textContent;
         document.getElementById('inline-chart').style.width = persent;
